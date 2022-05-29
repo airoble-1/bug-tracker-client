@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { XCircleIcon, CheckCircleIcon } from "@heroicons/react/solid";
+import { AiFillBug } from "react-icons/ai";
 import useFetchMutation from "../../hooks/useFetchMutation";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 import {
   FormWrapper,
   FormContainer,
-  FormImage,
   FormBox,
   FormTitle,
   FormError,
@@ -14,7 +14,7 @@ import {
 } from "../../styles/components/form";
 import { validateEmail } from "../../utils/RegexValidation";
 import ButtonLink from "./../ButtonLink/ButtonLink";
-import { baseUrl } from "../../config";
+// import { baseUrl } from "../../config";
 export default function SignupForm({ setIsLoginForm }) {
   let initialFormState = {
     identifier: "",
@@ -152,10 +152,9 @@ export default function SignupForm({ setIsLoginForm }) {
                     </div>
                   </FormSucess>
                 )}
-                <FormImage
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                  alt="logo"
-                />
+                <div className="flex justify-center">
+                  <AiFillBug className="h-10 w-10 text-indigo-500" />
+                </div>
               </FormBox>
               <FormTitle>Sign up</FormTitle>
               <Input

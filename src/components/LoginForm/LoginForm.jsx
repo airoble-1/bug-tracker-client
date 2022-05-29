@@ -4,7 +4,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { validateEmail } from "../../utils/RegexValidation";
 import useFetchMutation from "../../hooks/useFetchMutation";
 import { XCircleIcon, CheckCircleIcon } from "@heroicons/react/solid";
-import { FaBug } from "react-icons/fa";
+import { AiFillBug } from "react-icons/ai";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 import TestUser from "../TestUser/TestUser";
@@ -16,7 +16,7 @@ import {
   FormTitle,
   FormError,
 } from "../../styles/components/form";
-import { baseUrl } from "../../config";
+// import { baseUrl } from "../../config";
 
 export default function LoginForm({ setIsLoginForm }) {
   const [authState, setAuthState] = useContext(AuthContext);
@@ -120,7 +120,9 @@ export default function LoginForm({ setIsLoginForm }) {
                 </FormError>
               )}
               {data && <CheckCircleIcon className="h-7 w-7 text-green-500" />}
-              <FaBug className="h-7 w-7 text-indigo-500 text-center" />
+              <div className="flex justify-center">
+                <AiFillBug className="h-10 w-10 text-indigo-500" />
+              </div>
             </FormBox>
             <FormTitle>Log in</FormTitle>
             <Input
